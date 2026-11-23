@@ -194,3 +194,10 @@ a[href^="tel:"] { white-space: nowrap; }
 /* 홈 물결: 움직임 없는 세 겹 곡선 */
 .swell-3d { display: block; width: 100%; height: clamp(70px, 11vw, 150px); margin-top: 1.5rem; }
 .swell-3d + .sea { margin-top: -2px; }
+/* 연습실 시설과 비품 */
+.facts { display: grid; grid-template-columns: 8rem 1fr; margin: 0; background: var(--surface); border-radius: var(--radius-lg); padding: 0.3rem 1.1rem; }
+.facts dt, .facts dd { padding: 0.75rem 0; border-bottom: 1px solid var(--line); margin: 0; }
+.facts dt { font-weight: 600; font-size: var(--step--1); padding-right: 1rem; padding-top: 0.85rem; }
+.facts dt:nth-last-of-type(1), .facts dd:last-of-type { border-bottom: 0; }
+@media (max-width: 30rem) { .facts { grid-template-columns: 1fr; } .facts dt { border-bottom: 0; padding-bottom: 0.1rem; } .facts dd { padding-top: 0.1rem; } }
+.gallery.wide { grid-template-columns: repeat(3, 1fr); }

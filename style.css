@@ -181,3 +181,9 @@ a[href^="tel:"] { white-space: nowrap; }
 /* 공간 페이지 물결: 두 겹 */
 .swell .far { stroke-opacity: 0.35; }
 .map .leaflet-tile-pane { filter: grayscale(0.55) contrast(0.95) brightness(1.03); }
+.kit { list-style: none; margin: 0 0 0.6rem; padding: 0; background: var(--surface); border-radius: var(--radius-lg); columns: 2; column-gap: 0; }
+.kit li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.55rem 0.9rem; border-bottom: 1px solid var(--line); break-inside: avoid; font-size: var(--step--1); }
+.kit .qty { color: var(--muted); white-space: nowrap; }
+@media (max-width: 30rem) { .kit { columns: 1; } }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.5rem; margin: 1rem 0 0; }
+.gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius-sm); display: block; background: var(--line); }

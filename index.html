@@ -9,7 +9,7 @@
 <meta property="og:description" content="너울다락, 너울라운지, 너울연습실 안내">
 <meta name="theme-color" content="#f2f4f6">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=IBM+Plex+Sans+KR:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=2611242">
+<link rel="stylesheet" href="style.css?v=2611243">
 </head>
 <body class="home">
 <header class="topbar"><div class="wrap">
@@ -52,9 +52,9 @@
   if(!window.L) return;
   var places = [{"slug": "studio", "name": "너울연습실", "color": "#2f7f7a", "lat": 37.25025, "lng": 127.07675, "addr": "반달로 44, 3층", "side": "right"}, {"slug": "lounge", "name": "너울라운지", "color": "#8a3b52", "lat": 37.2469, "lng": 127.0588, "addr": "영통로218번길 58, 지하 1층", "side": "right"}, {"slug": "darak", "name": "너울다락", "color": "#b9761f", "lat": 37.25035, "lng": 127.07633, "addr": "반달로 42, 5층", "side": "left"}];
   var map = L.map('map', {scrollWheelZoom:false, attributionControl:true});
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-    maxZoom: 19, subdomains: 'abcd',
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
   var pts = [];
   places.forEach(function(p){

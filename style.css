@@ -180,3 +180,4 @@ a[href^="tel:"] { white-space: nowrap; }
 
 /* 공간 페이지 물결: 두 겹 */
 .swell .far { stroke-opacity: 0.35; }
+.map .leaflet-tile-pane { filter: grayscale(0.55) contrast(0.95) brightness(1.03); }

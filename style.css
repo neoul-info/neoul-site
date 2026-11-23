@@ -235,3 +235,4 @@ a[href^="tel:"] { white-space: nowrap; }
 @keyframes sway { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-28px,6px); } }
 @keyframes rock { 0%,100% { transform: rotate(-4deg) translateY(4px); } 50% { transform: rotate(5deg) translateY(-6px); } }
 @media (prefers-reduced-motion: reduce) { .swell-3d .row, .swell-3d .curl { animation: none !important; } }
+.swell-3d { height: max(150px, 19.2vw); }

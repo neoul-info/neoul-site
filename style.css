@@ -159,7 +159,6 @@ table + .note { margin-top: 0.6rem; }
 a[href^="tel:"] { white-space: nowrap; }
 
 /* 입체 물결 + 바다 구역 (홈) */
-.swell-3d { display: block; width: 100%; height: clamp(70px, 14vw, 140px); margin-top: 1.5rem; }
 .sea { background: #1c3b5a; color: #e8eef4; padding: 0.5rem 0 3rem; }
 .sea .places li { border-color: rgba(255,255,255,0.16); }
 .sea .places a { color: #fff; }
@@ -191,48 +190,7 @@ a[href^="tel:"] { white-space: nowrap; }
 .gallery a { display: block; }
 .gallery a:focus-visible { outline-offset: 3px; }
 
-/* 물결 흐름: 겹마다 다른 속도로 천천히 흘러감 (이음매 없이 반복) */
-.swell-3d { height: clamp(80px, 15vw, 160px); overflow: hidden; }
-.swell-3d .crest { fill: none; stroke: #ffffff; stroke-opacity: .28; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
-.swell path { vector-effect: non-scaling-stroke; }
-.drift { will-change: transform; }
-.swell-3d .drift-back  { animation: drift-home 48s linear infinite; }
-.swell-3d .drift-mid   { animation: drift-home 34s linear infinite reverse; }
-.swell-3d .drift-front { animation: drift-home 24s linear infinite; }
-.swell .drift-slow { animation: drift-space 40s linear infinite; }
-.swell .drift-mid  { animation: drift-space 26s linear infinite reverse; }
-@keyframes drift-home  { from { transform: translateX(0); } to { transform: translateX(-1200px); } }
-@keyframes drift-space { from { transform: translateX(0); } to { transform: translateX(-600px); } }
-@media (prefers-reduced-motion: reduce) { .drift { animation: none !important; } }
 
-/* 파도: 옆으로 흐르면서 겹마다 오르내림 */
-.swell-3d { height: clamp(90px, 16vw, 180px); }
-.swell-3d .crest { fill: none; stroke: #fff; stroke-opacity: .32; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
-.swell-3d .bob-back .crest { stroke-opacity: .5; }
-.swell-3d .drift-back  { animation: drift-home 30s linear infinite; }
-.swell-3d .drift-mid   { animation: drift-home 22s linear infinite reverse; }
-.swell-3d .drift-front { animation: drift-home 16s linear infinite; }
-.bob { will-change: transform; }
-.bob-back  { animation: bob 7s ease-in-out infinite; }
-.bob-mid   { animation: bob 5.5s ease-in-out -2s infinite; }
-.bob-front { animation: bob 4.5s ease-in-out -1s infinite; }
-@keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(9px); } }
-@media (prefers-reduced-motion: reduce) { .bob { animation: none !important; } }
-
-/* 결 무늬 파도 (세이가이하 풍) */
-.swell-3d { height: clamp(150px, 22vw, 260px); margin-top: 0.5rem; }
-.swell-3d .ln { fill: none; stroke: #fff; stroke-opacity: .85; stroke-linecap: round; }
-.swell-3d .row-deep .ln { stroke-opacity: .35; }
-.swell-3d .row-front .ln { stroke-opacity: .6; }
-.swell-3d .row, .swell-3d .curl { will-change: transform; transform-box: view-box; }
-.swell-3d .row-back  { animation: sway 9s ease-in-out infinite; }
-.swell-3d .row-mid   { animation: sway 7s ease-in-out -3s infinite reverse; }
-.swell-3d .row-front { animation: sway 6s ease-in-out -1s infinite; }
-.swell-3d .row-deep  { animation: sway 8s ease-in-out -4s infinite reverse; }
-.swell-3d .curl-a { animation: rock 6s ease-in-out infinite; }
-.swell-3d .curl-b { animation: rock 5s ease-in-out -2s infinite; }
-.swell-3d .curl-c { animation: rock 7s ease-in-out -1s infinite; }
-@keyframes sway { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-28px,6px); } }
-@keyframes rock { 0%,100% { transform: rotate(-4deg) translateY(4px); } 50% { transform: rotate(5deg) translateY(-6px); } }
-@media (prefers-reduced-motion: reduce) { .swell-3d .row, .swell-3d .curl { animation: none !important; } }
-.swell-3d { height: max(150px, 19.2vw); }
+/* 홈 물결: 움직임 없는 세 겹 곡선 */
+.swell-3d { display: block; width: 100%; height: clamp(70px, 11vw, 150px); margin-top: 1.5rem; }
+.swell-3d + .sea { margin-top: -2px; }

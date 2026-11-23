@@ -14,7 +14,7 @@
 <body class="home">
 <header class="topbar"><div class="wrap">
 <a class="brand" href="./">너울<small>NEOUL</small></a>
-<nav aria-label="공간"><a href="darak">다락</a><a href="lounge">라운지</a><a href="studio">연습실</a></nav>
+<nav aria-label="공간"><a href="studio">연습실</a><a href="lounge">라운지</a><a href="darak">다락</a></nav>
 </div></header>
 
 <main class="home">
@@ -22,19 +22,54 @@
 <h1>너울</h1>
 <p><strong>너, 나, 우리.</strong> 사람들이 편하게 어울리는 공간을 수원 영통에서 만들고 있어요.</p>
 </div>
-<svg class="swell" viewBox="0 0 600 60" preserveAspectRatio="none" aria-hidden="true"><g class="drift"><path d="M0 30 C50 8 150 8 200 30 S350 52 400 30 S550 8 600 30 S750 52 800 30"/></g></svg>
+<svg class="swell-3d" viewBox="0 0 1200 140" preserveAspectRatio="none" aria-hidden="true">
+<defs>
+<linearGradient id="sw-back" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fbad3"/><stop offset="1" stop-color="#6f93b5"/></linearGradient>
+<linearGradient id="sw-mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5c86ad"/><stop offset="1" stop-color="#3a6690"/></linearGradient>
+<linearGradient id="sw-front" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f5f8c"/><stop offset="1" stop-color="#1c3b5a"/></linearGradient>
+</defs>
+<path fill="url(#sw-back)" d="M0 58 C140 18 260 18 400 52 S660 92 800 50 S1060 10 1200 44 V140 H0Z"/>
+<path fill="url(#sw-mid)" d="M0 84 C170 46 300 50 450 80 S720 116 880 82 S1100 48 1200 70 V140 H0Z"/>
+<path fill="url(#sw-front)" d="M0 108 C190 80 330 84 500 104 S800 132 960 106 S1130 88 1200 98 V140 H0Z"/>
+<path fill="none" stroke="#ffffff" stroke-opacity=".35" stroke-width="2" d="M0 108 C190 80 330 84 500 104 S800 132 960 106 S1130 88 1200 98"/>
+</svg>
+<div class="sea">
 <div class="wrap">
 <ul class="places">
-<li><a href="darak"><span class="name"><span class="dot" style="background:#b9761f"></span>너울다락</span><span class="where">영통역 5분</span><span class="what">루프탑이 있는 단독 파티룸 · 최대 24명</span></a></li>
-<li><a href="lounge"><span class="name"><span class="dot" style="background:#8a3b52"></span>너울라운지</span><span class="where">망포역 3분</span><span class="what">지하 1층 전체를 쓰는 단독 라운지 · 최대 45명</span></a></li>
-<li><a href="studio"><span class="name"><span class="dot" style="background:#2f7f7a"></span>너울연습실</span><span class="where">영통역 7분</span><span class="what">24시간 음악 연습실 · 피아노방, 보컬·악기실, 거실</span></a></li>
+<li><a href="studio"><span class="name"><span class="dot" style="background:#2f7f7a"></span>너울연습실</span><span class="where">영통역 7분</span><span class="what">24시간 음악 연습실 · 피아노방, 보컬·악기실, 거실</span></a></li><li><a href="lounge"><span class="name"><span class="dot" style="background:#8a3b52"></span>너울라운지</span><span class="where">망포역 3분</span><span class="what">지하 1층 전체를 쓰는 단독 라운지 · 최대 45명</span></a></li><li><a href="darak"><span class="name"><span class="dot" style="background:#b9761f"></span>너울다락</span><span class="where">영통역 5분</span><span class="what">루프탑이 있는 단독 파티룸 · 최대 24명</span></a></li>
 </ul>
-<p class="note" style="margin-top:1.5rem">예약은 네이버 예약에서, 문의는 각 공간의 카카오톡 채널로 해 주세요.</p>
+<h2 class="map-title">세 공간의 위치</h2>
+<div id="map" class="map" role="region" aria-label="너울 세 공간의 위치 지도"></div>
+<p class="map-note">점을 누르면 네이버 지도로 길찾기를 열 수 있어요.</p>
+<p class="sea-note">예약은 네이버 예약에서, 문의는 각 공간의 카카오톡 채널로 해 주세요.</p>
+</div>
 </div>
 </main>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+(function(){
+  if(!window.L) return;
+  var places = [{"slug": "studio", "name": "너울연습실", "color": "#2f7f7a", "lat": 37.25025, "lng": 127.07675, "addr": "반달로 44, 3층", "side": "right"}, {"slug": "lounge", "name": "너울라운지", "color": "#8a3b52", "lat": 37.2469, "lng": 127.0588, "addr": "영통로218번길 58, 지하 1층", "side": "right"}, {"slug": "darak", "name": "너울다락", "color": "#b9761f", "lat": 37.25035, "lng": 127.07633, "addr": "반달로 42, 5층", "side": "left"}];
+  var map = L.map('map', {scrollWheelZoom:false, attributionControl:true});
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    maxZoom: 19, subdomains: 'abcd',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+  }).addTo(map);
+  var pts = [];
+  places.forEach(function(p){
+    var icon = L.divIcon({className:'pin pin-'+p.side, iconSize:null,
+      html:'<span class="pin-dot" style="background:'+p.color+'"></span><span class="pin-label">'+p.name+'</span>'});
+    var m = L.marker([p.lat,p.lng], {icon:icon, title:p.name}).addTo(map);
+    m.bindPopup('<strong>'+p.name+'</strong><br>'+p.addr+'<br><a href="'+p.slug+'">안내 보기</a> · <a href="https://map.naver.com/p/search/'+encodeURIComponent(p.name)+'" target="_blank" rel="noopener">네이버 지도 길찾기</a>');
+    pts.push([p.lat,p.lng]);
+  });
+  map.fitBounds(pts, {padding:[40,40]});
+})();
+</script>
 <footer><div class="wrap">
 <p>너울 NEOUL · 수원 영통</p>
-<p>카카오톡 문의: <a href="http://pf.kakao.com/_Skxdtxj/chat">너울다락</a> · <a href="http://pf.kakao.com/_Rxcxdtxj/chat">너울라운지</a> · <a href="http://pf.kakao.com/_NQUlj/chat">너울연습실</a></p>
+<p>카카오톡 문의: <a href="http://pf.kakao.com/_NQUlj/chat">너울연습실</a> · <a href="http://pf.kakao.com/_Rxcxdtxj/chat">너울라운지</a> · <a href="http://pf.kakao.com/_Skxdtxj/chat">너울다락</a></p>
 </div></footer>
 </body>
 </html>

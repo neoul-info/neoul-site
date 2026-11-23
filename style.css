@@ -53,12 +53,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .topbar nav a[aria-current="page"] { color: var(--ink); font-weight: 600; }
 
 /* 물결 — 너울의 상징 */
-.swell { display: block; width: 100%; height: 34px; color: var(--accent); }
+.swell { display: block; width: 100%; height: 40px; color: var(--accent); }
 .swell path { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
-.home .swell { height: 60px; color: var(--swell); }
-.home .swell .drift { animation: drift 14s linear infinite; }
-@keyframes drift { from { transform: translateX(0); } to { transform: translateX(-200px); } }
-@media (prefers-reduced-motion: reduce) { .home .swell .drift { animation: none; } }
+
+
+
+
 
 /* 홈 */
 .home-hero { padding-top: 3.5rem; padding-bottom: 1rem; }
@@ -157,3 +157,26 @@ footer p { margin: 0 0 0.4rem; }
 footer a { color: var(--muted); }
 table + .note { margin-top: 0.6rem; }
 a[href^="tel:"] { white-space: nowrap; }
+
+/* 입체 물결 + 바다 구역 (홈) */
+.swell-3d { display: block; width: 100%; height: clamp(70px, 14vw, 140px); margin-top: 1.5rem; }
+.sea { background: #1c3b5a; color: #e8eef4; padding: 0.5rem 0 3rem; }
+.sea .places li { border-color: rgba(255,255,255,0.16); }
+.sea .places a { color: #fff; }
+.sea .places .where, .sea .places .what { color: #b8c8d8; }
+.sea .places a:hover .name { color: #cfe0f0; }
+.sea .places .dot { box-shadow: 0 0 0 3px rgba(255,255,255,0.15); }
+.map-title { font-family: var(--display); font-weight: 700; font-size: var(--step-2); color: #fff; margin: 2.5rem 0 0.9rem; }
+.map { height: 340px; border-radius: var(--radius-lg); overflow: hidden; background: #2a4d70; box-shadow: 0 18px 40px -20px rgba(0,0,0,0.6); }
+.map-note, .sea-note { font-size: var(--step--1); color: #b8c8d8; margin: 0.7rem 0 0; }
+.sea-note { margin-top: 1.5rem; }
+.home + footer, body.home footer { border-top: 0; margin-top: 0; }
+.pin { background: none; border: 0; }
+.pin-dot { position: absolute; left: -9px; top: -9px; width: 18px; height: 18px; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.35); }
+.pin-label { position: absolute; top: -13px; white-space: nowrap; background: #fff; color: #18202e; font: 600 13px/1 var(--body); padding: 6px 8px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+.pin-right .pin-label { left: 14px; }
+.pin-left .pin-label { right: 14px; }
+.leaflet-popup-content { font-family: var(--body); font-size: 14px; line-height: 1.6; }
+
+/* 공간 페이지 물결: 두 겹 */
+.swell .far { stroke-opacity: 0.35; }

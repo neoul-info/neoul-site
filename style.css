@@ -204,3 +204,17 @@ a[href^="tel:"] { white-space: nowrap; }
 @keyframes drift-home  { from { transform: translateX(0); } to { transform: translateX(-1200px); } }
 @keyframes drift-space { from { transform: translateX(0); } to { transform: translateX(-600px); } }
 @media (prefers-reduced-motion: reduce) { .drift { animation: none !important; } }
+
+/* 파도: 옆으로 흐르면서 겹마다 오르내림 */
+.swell-3d { height: clamp(90px, 16vw, 180px); }
+.swell-3d .crest { fill: none; stroke: #fff; stroke-opacity: .32; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.swell-3d .bob-back .crest { stroke-opacity: .5; }
+.swell-3d .drift-back  { animation: drift-home 30s linear infinite; }
+.swell-3d .drift-mid   { animation: drift-home 22s linear infinite reverse; }
+.swell-3d .drift-front { animation: drift-home 16s linear infinite; }
+.bob { will-change: transform; }
+.bob-back  { animation: bob 7s ease-in-out infinite; }
+.bob-mid   { animation: bob 5.5s ease-in-out -2s infinite; }
+.bob-front { animation: bob 4.5s ease-in-out -1s infinite; }
+@keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(9px); } }
+@media (prefers-reduced-motion: reduce) { .bob { animation: none !important; } }

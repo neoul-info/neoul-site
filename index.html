@@ -14,7 +14,7 @@
 <body class="home">
 <header class="topbar"><div class="wrap">
 <a class="brand" href="./">너울<small>NEOUL</small></a>
-<nav aria-label="공간"><a href="studio">연습실</a><a href="lounge">라운지</a><a href="darak">다락</a></nav>
+<nav aria-label="공간"><a href="music">연습실</a><a href="lounge">라운지</a><a href="darak">다락</a></nav>
 </div></header>
 
 <main class="home">
@@ -36,7 +36,7 @@
 <div class="sea">
 <div class="wrap">
 <ul class="places">
-<li><a href="studio"><span class="name"><span class="dot" style="background:#2f7f7a"></span>너울연습실</span><span class="where">영통역 7분</span><span class="what">24시간 음악 연습실 · 피아노방, 보컬·악기실, 거실</span></a></li><li><a href="lounge"><span class="name"><span class="dot" style="background:#8a3b52"></span>너울라운지</span><span class="where">망포역 3분</span><span class="what">지하 1층 전체를 쓰는 단독 라운지 · 최대 45명</span></a></li><li><a href="darak"><span class="name"><span class="dot" style="background:#b9761f"></span>너울다락</span><span class="where">영통역 5분</span><span class="what">루프탑이 있는 단독 파티룸 · 최대 24명</span></a></li>
+<li><a href="music"><span class="name"><span class="dot" style="background:#2f7f7a"></span>너울연습실</span><span class="where">영통역 7분</span><span class="what">24시간 음악 연습실 · 피아노방, 보컬·악기실, 거실</span></a></li><li><a href="lounge"><span class="name"><span class="dot" style="background:#8a3b52"></span>너울라운지</span><span class="where">망포역 3분</span><span class="what">지하 1층 전체를 쓰는 단독 라운지 · 최대 45명</span></a></li><li><a href="darak"><span class="name"><span class="dot" style="background:#b9761f"></span>너울다락</span><span class="where">영통역 5분</span><span class="what">루프탑이 있는 단독 파티룸 · 최대 24명</span></a></li>
 </ul>
 <h2 class="map-title">세 공간의 위치</h2>
 <div id="map" class="map" role="region" aria-label="너울 세 공간의 위치 지도"></div>
@@ -50,7 +50,7 @@
 <script>
 (function(){
   if(!window.L) return;
-  var places = [{"slug": "studio", "name": "너울연습실", "color": "#2f7f7a", "lat": 37.25025, "lng": 127.07675, "addr": "반달로 44, 3층", "side": "right"}, {"slug": "lounge", "name": "너울라운지", "color": "#8a3b52", "lat": 37.2469, "lng": 127.0588, "addr": "영통로218번길 58, 지하 1층", "side": "right"}, {"slug": "darak", "name": "너울다락", "color": "#b9761f", "lat": 37.25035, "lng": 127.07633, "addr": "반달로 42, 5층", "side": "left"}];
+  var places = [{"slug": "music", "name": "너울연습실", "color": "#2f7f7a", "lat": 37.25025, "lng": 127.07675, "addr": "반달로 44, 3층", "side": "right"}, {"slug": "lounge", "name": "너울라운지", "color": "#8a3b52", "lat": 37.2469, "lng": 127.0588, "addr": "영통로218번길 58, 지하 1층", "side": "right"}, {"slug": "darak", "name": "너울다락", "color": "#b9761f", "lat": 37.25035, "lng": 127.07633, "addr": "반달로 42, 5층", "side": "left"}];
   var map = L.map('map', {scrollWheelZoom:false, attributionControl:true});
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,

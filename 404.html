@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>너울 NEOUL</title>
+<link rel="stylesheet" href="/style.css"></head><body>
+<script>
+(function(){var map={"84bb4f69-3d15-4d2c-8624-62de7e0dbf1c": "lounge#parking", "2c7ebf49-ff81-8092-a854-ee5823d8fb3d": "lounge#kitchen", "36d7e8b5-921a-4a75-a6df-8fc5c7015b37": "darak#parking", "2d7ebf49-ff81-8037-84b5-cfbda36d23d9": "darak#kitchen", "d24799e9-a906-45b8-a209-dac6b971111c": "darak#checkout", "29debf49-ff81-80ee-adc0-c7c2af823baf": "lounge#checkout", "2d9ebf49-ff81-8085-9bab-f8308409d341": "darak#faq", "7b206c04-00a8-4d77-8fea-5ffbbc609335": "lounge#faq", "4ff9147d-e3aa-4c6e-baff-7c4058140424": "darak#price", "1b6dbca2-b7d5-4818-8f3f-0c0b3510f6b1": "lounge#price", "1e9f8e69-654f-422a-b3fd-4186eff6243d": "darak#refund", "6ed45819-131c-49b7-b2ff-525883e1f7f0": "lounge#refund", "52ebbcda-ce37-4168-93a2-5d49a256e36a": "darak", "7880c320-d83c-40d5-b72d-b7992754f341": "lounge"};
+var p=location.pathname, base=p.indexOf('/neoul-site/')===0?'/neoul-site/':'/';
+var key=p.replace(base,'').replace(/\/$/,'');
+for(var k in map){if(key.indexOf(k)!==-1){location.replace(base+map[k]);return;}}
+location.replace(base);})();
+</script>
+<main class="wrap"><p>페이지를 옮겼어요. <a href="/">너울 첫 화면으로 가기</a></p></main>
+</body></html>

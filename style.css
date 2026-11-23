@@ -218,3 +218,20 @@ a[href^="tel:"] { white-space: nowrap; }
 .bob-front { animation: bob 4.5s ease-in-out -1s infinite; }
 @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(9px); } }
 @media (prefers-reduced-motion: reduce) { .bob { animation: none !important; } }
+
+/* 결 무늬 파도 (세이가이하 풍) */
+.swell-3d { height: clamp(150px, 22vw, 260px); margin-top: 0.5rem; }
+.swell-3d .ln { fill: none; stroke: #fff; stroke-opacity: .85; stroke-linecap: round; }
+.swell-3d .row-deep .ln { stroke-opacity: .35; }
+.swell-3d .row-front .ln { stroke-opacity: .6; }
+.swell-3d .row, .swell-3d .curl { will-change: transform; transform-box: view-box; }
+.swell-3d .row-back  { animation: sway 9s ease-in-out infinite; }
+.swell-3d .row-mid   { animation: sway 7s ease-in-out -3s infinite reverse; }
+.swell-3d .row-front { animation: sway 6s ease-in-out -1s infinite; }
+.swell-3d .row-deep  { animation: sway 8s ease-in-out -4s infinite reverse; }
+.swell-3d .curl-a { animation: rock 6s ease-in-out infinite; }
+.swell-3d .curl-b { animation: rock 5s ease-in-out -2s infinite; }
+.swell-3d .curl-c { animation: rock 7s ease-in-out -1s infinite; }
+@keyframes sway { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-28px,6px); } }
+@keyframes rock { 0%,100% { transform: rotate(-4deg) translateY(4px); } 50% { transform: rotate(5deg) translateY(-6px); } }
+@media (prefers-reduced-motion: reduce) { .swell-3d .row, .swell-3d .curl { animation: none !important; } }

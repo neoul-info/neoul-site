@@ -190,3 +190,17 @@ a[href^="tel:"] { white-space: nowrap; }
 .gallery { margin: 1.2rem 0 0.8rem; }
 .gallery a { display: block; }
 .gallery a:focus-visible { outline-offset: 3px; }
+
+/* 물결 흐름: 겹마다 다른 속도로 천천히 흘러감 (이음매 없이 반복) */
+.swell-3d { height: clamp(80px, 15vw, 160px); overflow: hidden; }
+.swell-3d .crest { fill: none; stroke: #ffffff; stroke-opacity: .28; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.swell path { vector-effect: non-scaling-stroke; }
+.drift { will-change: transform; }
+.swell-3d .drift-back  { animation: drift-home 48s linear infinite; }
+.swell-3d .drift-mid   { animation: drift-home 34s linear infinite reverse; }
+.swell-3d .drift-front { animation: drift-home 24s linear infinite; }
+.swell .drift-slow { animation: drift-space 40s linear infinite; }
+.swell .drift-mid  { animation: drift-space 26s linear infinite reverse; }
+@keyframes drift-home  { from { transform: translateX(0); } to { transform: translateX(-1200px); } }
+@keyframes drift-space { from { transform: translateX(0); } to { transform: translateX(-600px); } }
+@media (prefers-reduced-motion: reduce) { .drift { animation: none !important; } }

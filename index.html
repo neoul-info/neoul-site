@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#f2f4f6">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=IBM+Plex+Sans+KR:wght@400;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="favicon-neoul.svg">
-<link rel="stylesheet" href="style.css?v=2611253">
+<link rel="stylesheet" href="style.css?v=2611301">
 </head>
 <body class="home">
 <header class="topbar"><div class="wrap">
@@ -26,9 +26,13 @@
 <svg class="swell-3d" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true"><path fill="#c9d8e6" d="M0 62 C36.7 57.7 141.7 36.7 220 36 C298.3 35.3 386.7 59.0 470 58 C553.3 57.0 638.3 31.0 720 30 C801.7 29.0 880.0 51.3 960 52 C1040.0 52.7 1160.0 37.0 1200 34 V150 H0 Z"/><path fill="#6f96bb" d="M0 92 C43.3 88.3 170.0 69.3 260 70 C350.0 70.7 446.7 96.7 540 96 C633.3 95.3 733.3 67.3 820 66 C906.7 64.7 996.7 86.0 1060 88 C1123.3 90.0 1176.7 79.7 1200 78 V150 H0 Z"/><path fill="#1c3b5a" d="M0 120 C50.0 117.3 196.7 103.0 300 104 C403.3 105.0 520.0 125.7 620 126 C720.0 126.3 803.3 107.3 900 106 C996.7 104.7 1150.0 116.0 1200 118 V150 H0 Z"/></svg>
 <div class="sea">
 <div class="wrap">
-<ul class="places">
-<li><a href="music"><span class="name"><svg class="place-mark studio" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g stroke-width="3.5"><path d="M10 50 C23.8 42 46.2 42 60.0 50 S96.2 58 110 50"/><path d="M10 64 C23.8 56 46.2 56 60.0 64 S96.2 72 110 64"/><path d="M10 78 C23.8 70 46.2 70 60.0 78 S96.2 86 110 78"/></g><ellipse cx="76" cy="71" rx="9" ry="6.5" transform="rotate(-24 76 71)" fill="currentColor" stroke="none"/><path d="M84 68 V28" stroke-width="4.5"/></svg>너울연습실</span><span class="where">영통역 7분</span><span class="what">24시간 음악 연습실 · 피아노방, 보컬·악기실, 거실</span></a></li><li><a href="lounge"><span class="name"><svg class="place-mark lounge" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 102 V58 A28 28 0 0 1 88 58 V102"/><circle cx="60" cy="54" r="6" fill="currentColor" stroke="none"/><path d="M14 84 C26.6 77 47.4 77 60.0 84 S93.4 91 106 84"/></svg>너울라운지</span><span class="where">망포역 3분</span><span class="what">지하 1층 전체를 쓰는 단독 라운지 · 최대 45명</span></a></li><li><a href="darak"><span class="name"><svg class="place-mark darak" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 64 L60 28 L100 64"/><circle cx="60" cy="54" r="6" fill="currentColor" stroke="none"/><path d="M10 84 C23.8 75 46.2 75 60.0 84 S96.2 93 110 84"/></svg>너울다락</span><span class="where">영통역 5분</span><span class="what">루프탑이 있는 단독 파티룸 · 최대 24명</span></a></li>
+<h2 class="sr-only">세 공간</h2>
+<ul class="cards" id="cards">
+<li><a href="music"><span class="card-photo"><img src="music-02.webp" alt="너울연습실 거실" width="710" height="945" loading="eager"><span class="where">영통역 7분</span></span><span class="name"><svg class="place-mark studio" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g stroke-width="3.5"><path d="M10 50 C23.8 42 46.2 42 60.0 50 S96.2 58 110 50"/><path d="M10 64 C23.8 56 46.2 56 60.0 64 S96.2 72 110 64"/><path d="M10 78 C23.8 70 46.2 70 60.0 78 S96.2 86 110 78"/></g><ellipse cx="76" cy="71" rx="9" ry="6.5" transform="rotate(-24 76 71)" fill="currentColor" stroke="none"/><path d="M84 68 V28" stroke-width="4.5"/></svg>너울연습실</span><span class="what">24시간 음악 연습실 · 피아노방, 보컬·악기실, 거실</span></a></li>
+<li><a href="lounge"><span class="card-photo"><img src="lounge-kitchen-07.webp" alt="너울라운지 주방의 유리잔과 접시" width="1200" height="900" loading="lazy"><span class="where">망포역 3분</span></span><span class="name"><svg class="place-mark lounge" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 102 V58 A28 28 0 0 1 88 58 V102"/><circle cx="60" cy="54" r="6" fill="currentColor" stroke="none"/><path d="M14 84 C26.6 77 47.4 77 60.0 84 S93.4 91 106 84"/></svg>너울라운지</span><span class="what">지하 1층 전체를 쓰는 단독 라운지 · 최대 45명</span></a></li>
+<li><a href="darak"><span class="card-photo"><img src="darak-kitchen-04.webp" alt="너울다락의 와인잔과 유리잔" width="1200" height="900" loading="lazy"><span class="where">영통역 5분</span></span><span class="name"><svg class="place-mark darak" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 64 L60 28 L100 64"/><circle cx="60" cy="54" r="6" fill="currentColor" stroke="none"/><path d="M10 84 C23.8 75 46.2 75 60.0 84 S96.2 93 110 84"/></svg>너울다락</span><span class="what">루프탑이 있는 단독 파티룸 · 최대 24명</span></a></li>
 </ul>
+<div class="dots" aria-hidden="true"><span class="studio is-active"></span><span class="lounge"></span><span class="darak"></span></div>
 <h2 class="map-title">세 공간의 위치</h2>
 <div id="map" class="map" role="region" aria-label="너울 세 공간의 위치 지도"></div>
 <p class="map-note">점을 누르면 네이버 지도로 길찾기를 열 수 있어요.</p>
@@ -36,6 +40,7 @@
 </div>
 </div>
 </main>
+<script>(function(){var c=document.getElementById('cards');if(!c)return;var d=document.querySelectorAll('.dots span'),items=c.children;function u(){var x=c.scrollLeft,best=0,min=1e9;for(var i=0;i<items.length;i++){var m=Math.abs(items[i].offsetLeft-c.offsetLeft-x);if(m<min){min=m;best=i;}}if(c.scrollLeft+c.clientWidth>=c.scrollWidth-4)best=items.length-1;d.forEach(function(s,i){s.classList.toggle('is-active',i===best);});}c.addEventListener('scroll',u,{passive:true});})();</script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script>

@@ -201,3 +201,16 @@ a[href^="tel:"] { white-space: nowrap; }
 .facts dt:nth-last-of-type(1), .facts dd:last-of-type { border-bottom: 0; }
 @media (max-width: 30rem) { .facts { grid-template-columns: 1fr; } .facts dt { border-bottom: 0; padding-bottom: 0.1rem; } .facts dd { padding-top: 0.1rem; } }
 .gallery.wide { grid-template-columns: repeat(3, 1fr); }
+
+/* 로고 마크 */
+.brand { display: inline-flex; align-items: center; }
+.brand-mark { width: 1.6em; height: 1.6em; color: #1c3b5a; margin-right: 0.35rem; stroke-width: 9; }
+.home-title { display: flex; align-items: center; gap: 0.2em; }
+.home-mark { width: 1em; height: 1em; font-size: clamp(3.4rem, 16vw, 6rem); color: #1c3b5a; flex: none; }
+.space-title { display: flex; align-items: center; gap: 0.75rem; }
+.space-mark { width: clamp(3rem, 13vw, 4rem); height: clamp(3rem, 13vw, 4rem); color: var(--accent); flex: none; }
+.places .name { display: flex; align-items: center; gap: 0.6rem; }
+.place-mark { width: 1.25em; height: 1.25em; flex: none; stroke-width: 8; }
+.place-mark.studio { color: #6cc3bb; }
+.place-mark.lounge { color: #e08ba4; }
+.place-mark.darak { color: #e9b05c; }

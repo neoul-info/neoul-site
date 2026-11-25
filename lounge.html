@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#f2f4f6">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=IBM+Plex+Sans+KR:wght@400;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="favicon-lounge.svg">
-<link rel="stylesheet" href="style.css?v=2611254">
+<link rel="stylesheet" href="style.css?v=2611302">
 </head>
 <body class="lounge">
 <header class="topbar"><div class="wrap">
@@ -35,9 +35,9 @@
 <h2>요금</h2>
 <table>
 <thead><tr><th>시간</th><th>평일</th><th>주말</th></tr></thead>
-<tbody><tr><th>낮<small>12:00 – 17:00</small></th><td class=num>90,000원<small>월–금</small></td><td class=num>120,000원<small>토·일·공휴일</small></td></tr><tr><th>밤<small>19:00 – 24:00</small></th><td class=num>140,000원<small>일–목</small></td><td class=num>200,000원<small>금·토·공휴일 전날</small></td></tr><tr><th>올나잇<small>19:00 – 다음 날 09:00</small></th><td class=num>170,000원<small>일–목</small></td><td class=num>250,000원<small>금·토·공휴일 전날</small></td></tr></tbody>
+<tbody><tr><th>낮<small>12:00 – 17:00</small></th><td class=num>90,000원<small>월–금</small></td><td class=num>120,000원<small>토·일·공휴일</small></td></tr><tr><th>밤<small>19:00 – 24:00</small></th><td class=num>140,000원<small>일–목</small></td><td class=num>200,000원<small>금·토</small></td></tr><tr><th>올나잇<small>19:00 – 다음 날 09:00</small></th><td class=num>170,000원<small>일–목</small></td><td class=num>250,000원<small>금·토</small></td></tr></tbody>
 </table>
-<p class="note">낮은 토·일·공휴일, 밤과 올나잇은 금·토와 공휴일 전날이 주말 요금이에요. 밤타임·올나잇은 만 20세 이상만 이용할 수 있어요.</p>
+<p class="note">낮은 토·일·공휴일, 밤과 올나잇은 금·토가 주말 요금이에요. 밤타임·올나잇은 만 20세 이상만 이용할 수 있어요.</p>
 <div class="callout"><p><strong>지금은 밤 입실 1시간 무료</strong> 이벤트 중이에요. 네이버 예약에서 이벤트 옵션을 고르면 18시부터 들어오실 수 있어요. 앞 예약이 있는 날은 어려울 수 있어요.</p></div>
 <h3>인원</h3>
 <p>기준 8명, 최대 45명이에요. 추가 인원은 15명까지 1명당 10,000원, 16명부터는 1명당 7,000원이에요.</p>
@@ -115,9 +115,11 @@
 </section>
 </div>
 </main>
+<div class="cta-bar"><div class="wrap"><a class="btn primary" href="https://map.naver.com/p/search/너울라운지">네이버에서 예약하기</a><a class="btn" href="http://pf.kakao.com/_Rxcxdtxj/chat">카카오톡으로 문의하기</a></div></div>
 <footer><div class="wrap">
 <p>너울 NEOUL · 수원 영통</p>
 <p>카카오톡 문의: <a href="http://pf.kakao.com/_NQUlj/chat">너울연습실</a> · <a href="http://pf.kakao.com/_Rxcxdtxj/chat">너울라운지</a> · <a href="http://pf.kakao.com/_Skxdtxj/chat">너울다락</a></p>
 </div></footer>
+<script>(function(){var nav=document.querySelector('.jump');if(!nav)return;var links=[].slice.call(nav.querySelectorAll('a[href^="#"]'));var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});function u(){var y=window.scrollY+nav.offsetHeight+24,cur=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i;});links.forEach(function(a,i){var on=i===cur;a.classList.toggle('is-active',on);if(on&&a.getAttribute('aria-current')!=='true'){a.setAttribute('aria-current','true');var ul=a.closest('ul');ul.scrollTo({left:a.offsetLeft-ul.offsetWidth/2+a.offsetWidth/2,behavior:'smooth'});}else if(!on)a.removeAttribute('aria-current');});}window.addEventListener('scroll',u,{passive:true});u();})();</script>
 </body>
 </html>

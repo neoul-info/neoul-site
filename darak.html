@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#f2f4f6">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=IBM+Plex+Sans+KR:wght@400;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="favicon-darak.svg">
-<link rel="stylesheet" href="style.css?v=2611301">
+<link rel="stylesheet" href="style.css?v=2611254">
 </head>
 <body class="darak">
 <header class="topbar"><div class="wrap">
@@ -35,9 +35,9 @@
 <h2>요금</h2>
 <table>
 <thead><tr><th>시간</th><th>평일</th><th>주말</th></tr></thead>
-<tbody><tr><th>낮<small>12:00 – 17:00</small></th><td class=num>70,000원<small>월–금</small></td><td class=num>100,000원<small>토·일·공휴일</small></td></tr><tr><th>밤<small>19:00 – 24:00</small></th><td class=num>120,000원<small>일–목</small></td><td class=num>180,000원<small>금·토</small></td></tr><tr><th>올나잇<small>19:00 – 다음 날 09:00</small></th><td class=num>150,000원<small>일–목</small></td><td class=num>230,000원<small>금·토</small></td></tr></tbody>
+<tbody><tr><th>낮<small>12:00 – 17:00</small></th><td class=num>70,000원<small>월–금</small></td><td class=num>100,000원<small>토·일·공휴일</small></td></tr><tr><th>밤<small>19:00 – 24:00</small></th><td class=num>120,000원<small>일–목</small></td><td class=num>180,000원<small>금·토·공휴일 전날</small></td></tr><tr><th>올나잇<small>19:00 – 다음 날 09:00</small></th><td class=num>150,000원<small>일–목</small></td><td class=num>230,000원<small>금·토·공휴일 전날</small></td></tr></tbody>
 </table>
-<p class="note">낮은 토·일·공휴일, 밤과 올나잇은 금·토가 주말 요금이에요. 밤타임·올나잇은 만 19세 이상만 이용할 수 있어요.</p>
+<p class="note">낮은 토·일·공휴일, 밤과 올나잇은 금·토와 공휴일 전날이 주말 요금이에요. 밤타임·올나잇은 만 19세 이상만 이용할 수 있어요.</p>
 <div class="callout"><p><strong>지금은 밤 입실 1시간 무료</strong> 이벤트 중이에요. 네이버 예약에서 이벤트 옵션을 고르면 18시부터 들어오실 수 있어요. 앞 예약이 있는 날은 어려울 수 있어요.</p></div>
 <h3>인원</h3>
 <p>기준 6명, 최대 24명이에요. 추가 인원은 12명까지 1명당 10,000원, 13명부터는 1명당 7,000원이에요.</p>
@@ -65,6 +65,10 @@
 
 <section id="parking">
 <h2>주차</h2>
+<h3 id="route">주차장에서 오시는 길</h3>
+<p>건물 뒤 주차장 쪽에는 너울다락 건물로 들어오는 문이 <strong>없어요</strong>. 주차장에서 보이는 옆 건물 1층 문으로 들어가 큰길(반달로)로 나온 뒤, 바로 옆 ‘수원 국제행정사무소’ 간판 건물의 1층 출입구로 들어와 5층으로 올라오세요.</p>
+<figure class="route"><a href="darak-route-01.webp"><img src="darak-route-01.webp" alt="주차장에서 본 모습. 왼쪽 너울다락 건물의 뒷문은 입구가 아니고, 오른쪽 옆 건물 1층 문으로 들어가 통과합니다." loading="lazy" width="1122" height="614"></a><figcaption>① 주차장: 다락 건물 뒷문은 입구가 아니에요. 옆 건물 문으로 들어가 1층을 지나 주세요.</figcaption></figure>
+<figure class="route"><a href="darak-route-02.webp"><img src="darak-route-02.webp" alt="큰길에서 본 모습. 옆 건물 1층에서 나와 오른쪽 너울다락 건물 1층 출입구로 들어갑니다." loading="lazy" width="1124" height="610"></a><figcaption>② 큰길: 옆 건물에서 나와 너울다락 건물 1층 출입구로 들어오세요.</figcaption></figure>
 <h3>건물 주차 (최대 4대)</h3>
 <p>건물 뒤편 공용 주차장을 쓸 수 있지만 다른 층과 함께 써서 자리가 보장되지 않아요. 자리를 막은 차가 있으면 차량 번호가 보이게 찍은 사진과 연락처를 카카오톡 채널로 보내 주세요. 이동 주차를 요청해 드려요.</p>
 <h3>근처 주차장</h3>
@@ -115,11 +119,9 @@
 </section>
 </div>
 </main>
-<div class="cta-bar"><div class="wrap"><a class="btn primary" href="https://map.naver.com/p/search/너울다락">네이버에서 예약하기</a><a class="btn" href="http://pf.kakao.com/_Skxdtxj/chat">카카오톡으로 문의하기</a></div></div>
 <footer><div class="wrap">
 <p>너울 NEOUL · 수원 영통</p>
 <p>카카오톡 문의: <a href="http://pf.kakao.com/_NQUlj/chat">너울연습실</a> · <a href="http://pf.kakao.com/_Rxcxdtxj/chat">너울라운지</a> · <a href="http://pf.kakao.com/_Skxdtxj/chat">너울다락</a></p>
 </div></footer>
-<script>(function(){var nav=document.querySelector('.jump');if(!nav)return;var links=[].slice.call(nav.querySelectorAll('a[href^="#"]'));var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});function u(){var y=window.scrollY+nav.offsetHeight+24,cur=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i;});links.forEach(function(a,i){var on=i===cur;a.classList.toggle('is-active',on);if(on&&a.getAttribute('aria-current')!=='true'){a.setAttribute('aria-current','true');var ul=a.closest('ul');ul.scrollTo({left:a.offsetLeft-ul.offsetWidth/2+a.offsetWidth/2,behavior:'smooth'});}else if(!on)a.removeAttribute('aria-current');});}window.addEventListener('scroll',u,{passive:true});u();})();</script>
 </body>
 </html>

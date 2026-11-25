@@ -214,39 +214,7 @@ a[href^="tel:"] { white-space: nowrap; }
 .place-mark.studio { color: #6cc3bb; }
 .place-mark.lounge { color: #e08ba4; }
 .place-mark.darak { color: #e9b05c; }
-
-
-/* ── 2026.11 모바일 개편 ─────────────────────────── */
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-
-/* 홈: 공간 카드 넘겨보기 */
-.cards { list-style: none; margin: 0.5rem -1.25rem 0; padding: 0 1.25rem; display: flex; gap: 0.75rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 1.25rem; scrollbar-width: none; overscroll-behavior-x: contain; }
-.cards::-webkit-scrollbar { display: none; }
-.cards::after { content: ""; flex: 0 0 0.5rem; }
-.cards li { flex: 0 0 min(19rem, 80%); scroll-snap-align: start; }
-.cards a { display: flex; flex-direction: column; gap: 0.6rem; color: #fff; text-decoration: none; }
-.card-photo { position: relative; display: block; aspect-ratio: 300 / 190; border-radius: 18px; overflow: hidden; background: #2a4d70; }
-.card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
-.cards a:hover .card-photo img { transform: scale(1.03); }
-.card-photo .where { position: absolute; top: 0.75rem; right: 0.75rem; font-size: 0.75rem; line-height: 1; color: #fff; background: rgba(28,59,90,.82); padding: 0.4rem 0.6rem; border-radius: 999px; }
-.cards .name { display: flex; align-items: center; gap: 0.6rem; font-family: var(--display); font-weight: 700; font-size: 1.75rem; line-height: 1.1; margin-top: 0.15rem; }
-.cards .what { color: #b8c8d8; font-size: var(--step--1); line-height: 1.55; }
-.cards a:hover .name { color: #cfe0f0; }
-.dots { display: flex; gap: 6px; margin: 1rem 0 0; }
-.dots span { height: 4px; width: 10px; border-radius: 2px; background: rgba(255,255,255,.3); transition: width .25s, background .25s; }
-.dots span.is-active { width: 28px; }
-.dots .studio.is-active { background: #6cc3bb; }
-.dots .lounge.is-active { background: #e08ba4; }
-.dots .darak.is-active { background: #e9b05c; }
-@media (min-width: 40rem) { .cards li { flex-basis: calc(50% - 0.5rem); } .dots { display: none; } }
-@media (prefers-reduced-motion: reduce) { .card-photo img, .dots span { transition: none; } }
-
-/* 공간 페이지: 바로가기 현재 위치 */
-.jump a.is-active { background: var(--accent); border-color: var(--accent); color: #fff; }
-main ul.plain li::marker { color: var(--accent); }
-
-/* 공간 페이지: 하단 고정 예약 바 */
-body.darak, body.lounge, body.studio { padding-bottom: 5.5rem; }
-.cta-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; background: rgba(242,244,246,.96); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--line); padding: 0.7rem 0 calc(0.7rem + env(safe-area-inset-bottom)); }
-.cta-bar .wrap { display: flex; gap: 0.5rem; }
-.cta-bar .btn { flex: 1; text-align: center; padding: 0.8rem 0.5rem; font-size: 0.95rem; }
+.route { margin: 1rem 0 1.2rem; }
+.route a { display: block; }
+.route img { width: 100%; height: auto; display: block; border-radius: var(--radius-sm); background: var(--line); }
+.route figcaption { margin-top: 0.45rem; font-size: 0.92rem; color: var(--muted, inherit); line-height: 1.55; }

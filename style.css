@@ -228,7 +228,7 @@ a[href^="tel:"] { white-space: nowrap; }
 .book:hover { filter: brightness(0.95); }
 .book:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
 /* 공간 사진 */
-.hero-photo { margin: 1.4rem 0 0; }
+.hero-photo { margin: 1.4rem auto 0; }
 .hero-photo img { display: block; width: 100%; max-height: 520px; object-fit: cover; border-radius: var(--radius-lg); }
 .gallery.single { grid-template-columns: minmax(0, 22rem); }
 /* 상단 탭: 지금 보고 있는 구역 표시 */
